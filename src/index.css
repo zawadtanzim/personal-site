@@ -1,0 +1,108 @@
+/* Highlight institution names in Experience section */
+.institution {
+  color: var(--brand) !important;
+  font-weight: 600;
+}
+/* Portfolio layout and component styles */
+a { color: inherit; text-decoration: none; }
+a.link, p.link { color: var(--brand) !important; }
+
+.container { width: min(1100px, 92vw); margin: 0 auto; }
+
+nav {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(180%) blur(12px);
+  background: linear-gradient(to bottom, rgba(12,12,12,.65), rgba(12,12,12,.25));
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.light nav { background: linear-gradient(to bottom, rgba(255,255,255,.7), rgba(255,255,255,.4)); border-bottom-color: rgba(0,0,0,.06); }
+.nav-inner { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+.brand { font-weight: 800; letter-spacing: -0.02em; display:flex; align-items:center; gap:10px; }
+.brand-dot { width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 0 20px var(--ring); }
+.nav-links { display:flex; gap: 18px; align-items:center; }
+.nav-links a { padding: 8px 12px; border-radius: 999px; transition: background .2s ease; color: var(--muted); font-weight:600; }
+.nav-links a:hover { background: rgba(255,255,255,.06); color: var(--text); }
+.btn {
+  display:inline-flex; align-items:center; gap:10px; padding: 10px 14px; border-radius: 999px; border: 1px solid transparent; font-weight:600; cursor:pointer;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b0b0b; box-shadow: var(--shadow);
+}
+.btn.ghost { background: transparent; color: var(--text); border-color: rgba(255,255,255,.12); }
+
+.hero { padding: 84px 0 36px; position: relative; overflow: hidden; }
+.tag { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); color: var(--muted); font-size: 14px; }
+.tag .pulse { width:8px; height:8px; border-radius:999px; background: var(--brand); box-shadow: 0 0 0 0 var(--ring); animation: pulse 2.2s ease-out infinite; }
+@keyframes pulse { 0%{ box-shadow:0 0 0 0 var(--ring);} 70%{ box-shadow:0 0 0 16px transparent;} 100%{ box-shadow:0 0 0 0 transparent;} }
+
+.headline { margin-top: 16px; font-size: clamp(36px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 900; }
+.sub { margin-top: 14px; color: var(--muted); font-size: clamp(16px, 2.5vw, 20px); max-width: 720px; }
+.cta { margin-top: 24px; display:flex; gap: 10px; flex-wrap: wrap; }
+
+.marquee { margin: 48px 0 0; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; overflow: hidden; background: linear-gradient(180deg, rgba(255,255,255,.04), transparent); }
+.track { display:flex; gap: 40px; padding: 18px; white-space: nowrap; animation: scroll 28s linear infinite; }
+.track span { color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 14px; }
+@keyframes scroll { from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
+
+.section { padding: 64px 0; }
+.section h2 { font-size: clamp(22px, 1.8vw, 28px); letter-spacing: -0.02em; margin: 0 0 16px; }
+.grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.card { grid-column: span 6; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border-radius: 18px; padding: 18px; border: 1px solid rgba(255,255,255,.06); box-shadow: var(--shadow); position: relative; overflow: hidden; }
+.card:hover { border-color: rgba(124,255,240,.4); }
+.card .kicker { color: var(--muted); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+.card h3 { margin: 6px 0 8px; font-size: 22px; letter-spacing: -0.01em; }
+.card p { color: var(--muted); margin: 0; }
+.card .meta { margin-top: 12px; display:flex; gap:8px; flex-wrap: wrap; }
+.badge { padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); font-size: 12px; color: var(--muted); }
+.card .arrow { position:absolute; right:14px; top:14px; opacity:.5; }
+
+.two-col { display:grid; grid-template-columns: 1.2fr .8fr; gap: 22px; }
+.panel { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; padding: 20px; box-shadow: var(--shadow); transition: border-color .2s; }
+.panel:hover { border-color: rgba(124,255,240,.4); }
+.panel p { color: var(--muted); margin: 0 0 10px; }
+.list { display:grid; gap: 8px; }
+.list .row { display:flex; align-items:center; justify-content:space-between; padding: 10px 12px; border:1px solid rgba(255,255,255,.06); border-radius: 12px; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); transition: border-color .2s; }
+.list .row:hover { border-color: rgba(124,255,240,.4); }
+
+.contact { display:grid; grid-template-columns: 1fr .6fr; gap: 18px; }
+.contact .cta-box { padding: 28px; border-radius: 18px; border: 1px solid rgba(255,255,255,.08); box-shadow: var(--shadow); background: var(--card); transition: border-color .2s; }
+.contact .cta-box:hover { border-color: rgba(124,255,240,.4); }
+.contact .cta-box h3 { margin-top:0; font-size: 26px; }
+
+footer { padding: 32px 0 48px; color: var(--muted); }
+
+@media (max-width: 940px) {
+  .two-col, .contact { grid-template-columns: 1fr; }
+  .card { grid-column: span 12; }
+}
+
+:where(a, button, .row, .badge):focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 12px; }
+/* === Portfolio Custom CSS (Part 1: Root, Theme, Global) === */
+:root {
+  --bg: #0c0c0c;
+  --card: #121212;
+  --text: #eaeaea;
+  --muted: #a1a1a1;
+  --brand: #7cfff0;
+  --brand-2: #b2a8ff;
+  --ring: rgba(124, 255, 240, 0.35);
+  --shadow: 0 10px 30px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.04);
+}
+.light {
+  --bg: #fafafa;
+  --card: #ffffff;
+  --text: #0b0b0b;
+  --muted: #525252;
+  --brand: #0066ff;
+  --brand-2: #7b61ff;
+  --ring: rgba(0,102,255,.18);
+  --shadow: 0 10px 30px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
