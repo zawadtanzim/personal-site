@@ -8,7 +8,7 @@ const Contact = () => (
   <p style={{color:'var(--muted)', maxWidth: '52ch'}}>Open to web development, full-stack, technical support, IT help desk, and any entry-level tech roles. Excited to learn, grow, and make an impact. Love to chat.</p>
         <div className="cta">
           <a className="btn" href="mailto:zawadtanzim@gmail.com">Email Me</a>
-          <a className="btn ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a className="btn ghost" href="/personal-site/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
   <div className="panel">
